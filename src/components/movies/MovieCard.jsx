@@ -15,7 +15,7 @@ export const MovieCard = ({
 
     return (
         <>
-            <article>
+            <article className='card'>
                 <section className='card-poster'>
                     <img src={posterImageUrl} alt={title} />
                 </section>
@@ -31,9 +31,7 @@ export const MovieCard = ({
                             ))}
                         </ul>
                     </div>
-                    <div className='card-info-desc'>
-                      {description}
-                    </div>
+                    <div className='card-info-desc'>{description}</div>
                 </section>
             </article>
         </>
