@@ -1,10 +1,12 @@
-import { Navbar } from './ui/Navbar/Navbar';
+import { Provider } from 'react-redux';
+import { LoginPage } from './components/auth/LoginPage';
+import { store } from './store/store'
 
 function App() {
     return (
-        <>
-            <Navbar />
-        </>
+        <Provider store={store}>
+            <LoginPage />
+        </Provider>
     );
 }
 
