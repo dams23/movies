@@ -1,0 +1,43 @@
+.card-movie {
+    padding: 0.5rem;
+    background-color: var(--main-primary-white);
+    border: 1px solid var(--main-primary-orange);
+    border-radius: 15px;
+    display: flex;
+    max-width: 50vw;
+}
+.img-fluid {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 400px;
+    cursor: pointer;
+}
+
+.img-fluid:hover {
+    filter: blur(1px);
+}
+
+.img-fluid:hover::after {
+    display: block;
+    content: 'Ver mas';
+    top: 50%;
+}
+
+.card-body {
+    height: auto;
+}
+.card-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.movies-genres-list {
+    display: inline-flex;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+.movie-genre {
+    text-decoration: none;
+    color: #000;
+}

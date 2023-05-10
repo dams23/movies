@@ -1,0 +1,64 @@
+
+body {
+    background-color: var(--main-primary-black);
+}
+.login-container {
+    margin-top: 3%;
+    background-color: var(--main-primary-white);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px var(--main-primary-orange);
+}
+.login-container form {
+    padding: 1rem;
+}
+.login-container h2 h3 {
+    text-align: center;
+    align-content: center;
+}
+.login-container .row {
+    align-content: center;
+}
+.login-container .form-group {
+    padding: 1rem;
+}
+.login-container .form-group input {
+    border-radius: 0.5rem;
+    border-color: transparent;
+}
+.login-container .form-group input:hover {
+    border-bottom-color: var(--main-primary-orange);
+    border-bottom-width: 0.3rem;
+}
+.login-container .form-group input:focus {
+    border-bottom-color: var(--main-primary-orange);
+    border-bottom-width: 0.3rem;
+}
+.login-container .form-group .btnSubmit {
+    width: 20vw;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-primary-orange);
+    color: var(--main-primary-white);
+    font-size: 1.5em;
+    box-shadow: 3px 3px var(--main-secondary-orange);
+}
+.login-container .form-group .btnSubmit:hover {
+    background-color: var(--main-primary-yellow);
+    color: var(--main-secondary-orange);
+    border-style: none;
+    font-size: 1.5em;
+    box-shadow: 3px 3px var(--main-primary-orange);
+}
+.row {
+    align-content: center;
+    text-align: center;
+}
+.login-title {
+    margin-top: 3rem;
+    align-content: center;
+    text-align: center;
+    color: var(--main-primary-white);
+}

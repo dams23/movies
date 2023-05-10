@@ -1,13 +1,8 @@
-import { Provider } from 'react-redux';
-import { LoginPage } from './components/auth/LoginPage';
-import { store } from './store/store'
+import { MovieCard } from './components/movies/MovieCard';
+import { AppRouter } from './router/AppRouter';
 
 function App() {
-    return (
-        <Provider store={store}>
-            <LoginPage />
-        </Provider>
-    );
+    return <MovieCard />;
 }
 
 export default App;

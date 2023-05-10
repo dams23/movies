@@ -1,11 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/index';
-import { startLogin } from '../../actions/auth';
+import { users } from '../../data/users';
 
 import './loginpage.css';
 
 export const LoginPage = () => {
-    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [formLoginValues, handleInputChange] = useForm({
         usermame: '',
         password: '',
@@ -13,7 +13,18 @@ export const LoginPage = () => {
     const { username, password } = formLoginValues;
     const handleLogin = (e) => {
         e.preventDefault();
-        dispatch(startLogin(username, password));
+        const user = users.find(user => user.name === username && user.password === password);
+        if(user)
+        {
+
+            navigate('/',{
+                replace: true,
+                state: {
+                    logged: true,
+                    user
+                }
+            });
+        }
     };
 
     return (
@@ -49,12 +60,13 @@ export const LoginPage = () => {
                                         />
                                     </div>
                                     <div className='form-group'>
-                                        <input
+                                        <button
                                             type='submit'
                                             value='Login'
                                             className='btnSubmit'
-                                            onClick={handleLogin}
-                                        />
+                                            onClick={handleLogin}>
+                                            Login
+                                        </button>
                                     </div>
                                 </form>
                             </div>
