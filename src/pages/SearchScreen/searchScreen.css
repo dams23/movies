@@ -1,0 +1,27 @@
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.search-header .search-container {
+  width: 100%;
+}
+.search-header .search-container:hover {
+  translate: -3px -3px;
+  box-shadow: 3px 3px var(--main-primary-orange);
+}
+.search-header .search-container input {
+  width: 95%;
+  text-align: center;
+}
+.search-header .search-container button{
+  width: 5%;
+  padding: 5px;
+}
+.search-divisor{
+  display: flex;
+  border-bottom: 1px solid var(--main-primary-orange);
+  width: 80%;
+  margin-inline: 10%;
+}

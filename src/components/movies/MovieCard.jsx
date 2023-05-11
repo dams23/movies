@@ -19,10 +19,10 @@ export const MovieCard = ({ movie }) => {
                     <div className='card-body'>
                         <h3 className='card-title'>{title}</h3>
                         <p className='card-text'>
-                            <smal className='text-muted'>
+                            <span className='text-muted'>
                                 <b>Release Date: </b>
                                 {releaseDate}
-                            </smal>
+                            </span>
                         </p>
                         <p className='card-text'>{description}</p>
                         <Link to={`./movies/${id}`}>Leer más</Link>

@@ -13,16 +13,6 @@
     cursor: pointer;
 }
 
-.img-fluid:hover {
-    filter: blur(1px);
-}
-
-.img-fluid:hover::after {
-    display: block;
-    content: 'Ver mas';
-    top: 50%;
-}
-
 .card-body {
     height: auto;
 }
