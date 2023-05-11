@@ -2,6 +2,7 @@ import { moviesImages } from '../../helpers/moviesImages';
 import { movies } from '../../data/movies';
 import './movies.css';
 import { Link } from 'react-router-dom';
+import { MoviePlayer } from '../moviePlayer/MoviePlayer';
 
 export const MovieCover = ({ idMovie }) => {
     const movie = movies.find((movie) => movie.id === idMovie);
@@ -48,13 +49,7 @@ export const MovieCover = ({ idMovie }) => {
                     </ul>
                 </footer>
             </article>
-            <div className='video-responsive'>
-                <iframe
-                    src={`https://www.youtube.com/embed/${movie.trailer}`}
-                    allowFullScreen
-                    title={movie.title}
-                />
-            </div>
+            <MoviePlayer movie={movie}/>
         </>
     );
 };

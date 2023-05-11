@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useForm } from '../../hooks';
 import { getMoviesByTitle } from '../../selectors/getMoviesByTitle';
-import { MovieCard } from '../../components/movies/MovieCard';
+import { NotResult } from '../../components/NotResults/NotResult';
+import { MovieList } from '../../components/movieList/MovieList';
 
 import './searchScreen.css';
-import { NotResult } from '../../components/NotResults/NotResult';
 
 export const SearchScreen = () => {
     const [movies, setMovies] = useState([]);
@@ -19,7 +19,7 @@ export const SearchScreen = () => {
     return (
         <>
             <div className='search-header'>
-                <form className='search-container'>
+                <div className='search-container'>
                     <input
                         type='text'
                         className='search-input'
@@ -29,14 +29,14 @@ export const SearchScreen = () => {
                         onChange={handleInputChange}
                     />
                     <i className='bx bx-search-alt'></i>
-                </form>
+                </div>
             </div>
             <span className='search-divisor'></span>
             <div className='search-results'>
                 {movies.length === 0 && search !== '' ? (
                     <NotResult />
                 ) : (
-                    movies.map((m) => <MovieCard key={m.id} movie={m} />)
+                    <MovieList movies={movies} />
                 )}
             </div>
         </>

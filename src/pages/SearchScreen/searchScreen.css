@@ -6,6 +6,7 @@
 }
 .search-header .search-container {
   width: 100%;
+  max-width: 800px;
 }
 .search-header .search-container:hover {
   translate: -3px -3px;
@@ -24,4 +25,10 @@
   border-bottom: 1px solid var(--main-primary-orange);
   width: 80%;
   margin-inline: 10%;
+}
+.search-results{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }

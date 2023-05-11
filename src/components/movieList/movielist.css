@@ -1,0 +1,20 @@
+.movies-list__container {
+    align-items: center;
+    color: var(--main-primary-white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    border-radius: 20px;
+    margin: 15px 0 30px 0;
+}
+.movies-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+  justify-content: center;
+}
