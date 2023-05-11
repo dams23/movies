@@ -1,8 +1,9 @@
-import { MovieCard } from './components/movies/MovieCard';
-import { AppRouter } from './router/AppRouter';
+import { MovieCover } from './components/movies/MovieCover';
+import { NotFound } from './pages/NotFound/NotFound';
+import { Navbar } from './ui/Navbar/Navbar';
 
 function App() {
-    return <MovieCard />;
+    return <MovieCover idMovie={3} />;
 }
 
 export default App;

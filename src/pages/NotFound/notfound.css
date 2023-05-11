@@ -1,0 +1,24 @@
+.notFound-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: var(--main-primary-orange);
+    flex-direction: column;
+}
+.notFound-title {
+    font-size: 15rem;
+    text-shadow: 0px 3px 5px var(--main-primary-white);
+}
+.form-group {
+    display: flex;
+}
+.form-group button {
+    background-color: white;
+    position: relative;
+    left: -10px;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+}
