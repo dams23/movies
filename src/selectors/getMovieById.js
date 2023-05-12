@@ -1,6 +1,6 @@
 import { movies } from '../data/movies';
 
-export const getMoiveById = (id) => {
+export const getMovieById = (id) => {
 
   return movies.find((movie) => movie.id === id);
 

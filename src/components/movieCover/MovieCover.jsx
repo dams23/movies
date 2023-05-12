@@ -1,8 +1,8 @@
 import { moviesImages } from '../../helpers/moviesImages';
 import { movies } from '../../data/movies';
 import './movies.css';
-import { Link } from 'react-router-dom';
 import { MoviePlayer } from '../moviePlayer/MoviePlayer';
+import { MovieDetails } from '../movieDetails/MovieDetails';
 
 export const MovieCover = ({ idMovie }) => {
     const movie = movies.find((movie) => movie.id === idMovie);
@@ -25,31 +25,6 @@ export const MovieCover = ({ idMovie }) => {
                     </span>
                 </div>
             </div>
-            <article className='movie-container'>
-                <header className='movie-container__header'>
-                    <span>
-                        <b>Duration: </b>120m
-                    </span>
-                </header>
-                <main>
-                    <p>{movie.description}</p>
-                </main>
-                <footer>
-                    <h5>Genres</h5>
-                    <ul>
-                        {movie.genres.map((g) => (
-                            <li>
-                                <Link
-                                    to={`./genres/${g.id}`}
-                                    className='btn-genres'>
-                                    {g.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </footer>
-            </article>
-            <MoviePlayer movie={movie}/>
         </>
     );
 };

@@ -25,9 +25,11 @@
     text-align: center;
     justify-content: center;
     padding: 2rem;
-    box-shadow: 5px 5px 1px var(--main-primary-orange);
+    box-shadow: 5px 5px 5px var(--main-primary-orange);
 }
 .movie-container__header {
+    display: flex;
+    gap: 1rem;
     text-align: justify;
     padding: 1rem;
 }

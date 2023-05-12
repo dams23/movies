@@ -1,8 +1,12 @@
 .video-responsive {
   width: 100%;
-  display: block;
+  max-height: 720px;
+  display: flex;
+  justify-content: center;
 }
 iframe{
-  width: 80%;
-  height: 100vh;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+
 }
