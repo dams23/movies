@@ -2,9 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/index';
 import { users } from '../../data/users';
 
-import './loginpage.css';
+import './loginScreen.css';
 
-export const LoginPage = () => {
+export const LoginScreen = () => {
     const navigate = useNavigate();
     const [formLoginValues, handleInputChange] = useForm({
         usermame: '',
@@ -28,7 +28,7 @@ export const LoginPage = () => {
     };
 
     return (
-        <div>
+        <div className='contenedor-login'>
             <div className='row login-title'>
                 <h2>Movies App</h2>
             </div>

@@ -1,15 +1,12 @@
-import { moviesImages } from '../../helpers/moviesImages';
-import { movies } from '../../data/movies';
 import './movies.css';
-import { MoviePlayer } from '../moviePlayer/MoviePlayer';
-import { MovieDetails } from '../movieDetails/MovieDetails';
+import { moviesImages } from '../../helpers/moviesImages';
 
-export const MovieCover = ({ idMovie }) => {
-    const movie = movies.find((movie) => movie.id === idMovie);
+export const MovieCover = ({ poster='', title='no carga', releaseDate='' }) => {
     const style = {
-        width: '100%',
+            width: '100%',
         height: '50vh',
-        backgroundImage: `url(${moviesImages(`./${movie.poster}`)})`,
+        backgroundImage: `url(${moviesImages(`./${poster}`)})`,
+
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backdropFilter: `blur('4px')`,
@@ -18,10 +15,10 @@ export const MovieCover = ({ idMovie }) => {
         <>
             <div className='cover-movie' style={style}>
                 <div className='cover-movie__header'>
-                    <h1>{movie.title}</h1>
+                    <h1>{title}</h1>
                     <span>
                         <b>Release: </b>
-                        <small>{movie.releaseDate}</small>
+                        <small>{releaseDate}</small>
                     </span>
                 </div>
             </div>

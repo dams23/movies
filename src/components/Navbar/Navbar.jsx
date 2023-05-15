@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import './navbar.css';
 
@@ -8,22 +8,22 @@ export const Navbar = () => {
             <nav className='navbar'>
                 <ul>
                     <li>
-                        <NavLink to='/'>Home</NavLink>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <NavLink to='/'>Genres</NavLink>
+                        <Link to='/'>Genres</Link>
                     </li>
                     <li>
-                        <NavLink to='/'>Search</NavLink>
+                        <Link to='/search'>Search</Link>
                     </li>
                     <li>
-                        <NavLink to='/'>My list</NavLink>
+                        <Link to='/'>My list</Link>
                     </li>
                     <li>
-                        <NavLink to='/'>Log Out</NavLink>
+                        <Link to='/'>Log Out</Link>
                     </li>
                     <li>
-                        <NavLink to='/'>Log In</NavLink>
+                        <Link to='/'>Log In</Link>
                     </li>
                 </ul>
                 <form className='search-container'>

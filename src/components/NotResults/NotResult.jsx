@@ -6,7 +6,7 @@ export const NotResult = () => {
             <h1>Notting to show...</h1>
             <p>
                 Parece que buscaste alguna pelicula que no se encuentra en
-                nuestros registros Intenta buscar otra pelicula
+                nuestros registros intenta buscar otra pelicula
             </p>
         </div>
     );

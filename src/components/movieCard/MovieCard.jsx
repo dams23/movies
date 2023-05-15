@@ -8,7 +8,7 @@ export const MovieCard = ({ movie }) => {
     return (
         <>
             <article className='card-movie'>
-                <Link to={`./movie/${id}`}>
+                <Link to={`/movie/${id}`}>
                     <section className='card-movie__picture'>
                         <img
                             src={moviesImages(`./${poster}`)}

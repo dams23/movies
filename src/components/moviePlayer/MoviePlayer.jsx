@@ -1,13 +1,13 @@
 import './moviePlayer.css';
 
-export const MoviePlayer = ({movie}) => {
+export const MoviePlayer = ({ title, trailer }) => {
     return (
         <>
             <div className='video-responsive'>
                 <iframe
-                    src={`https://www.youtube.com/embed/${movie.trailer}`}
+                    src={`https://www.youtube.com/embed/${trailer}`}
                     allowFullScreen
-                    title={movie.title}
+                    title={title}
                 />
             </div>
         </>

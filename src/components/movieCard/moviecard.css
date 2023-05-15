@@ -6,6 +6,7 @@
     background-color: rgba(255, 255, 255, 0.2) ;
     backdrop-filter: blur(14px);
     gap: 10px;
+    line-height: 1.5rem;
 }
 .card-movie a{
     text-decoration: none;
@@ -42,7 +43,7 @@
     overflow: hidden;
     white-space: nowrap;
     font-size: 0.7rem;
-    color: var(--main-primary-black);
+    color: var(--main-primary-white);
 }
 .movies-genres-list {
     display: inline-flex;
