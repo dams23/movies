@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { MovieDetails } from '../../components/movieDetails/MovieDetails';
-import { getMovieById } from '../../selectors/getMovieById';
-import './moviescreen.css';
 import { MovieCover } from '../../components/movieCover/MovieCover';
 import { useMovie } from '../../hooks/useMovie';
 import { Loader } from '../../components/loader/Loader';
 import { MoviePlayer } from '../../components/moviePlayer/MoviePlayer';
+
+import './moviescreen.css';
 
 export const MovieScreen = () => {
     const { id } = useParams();

@@ -7,7 +7,7 @@ export const MovieGenre = ({ genre }) => {
     const movies = getMoviesByGenresId(genre.id);
     return (
         <section className='genre-movies__container'>
-            <Link to={`./genre/${genre.id}`}>
+            <Link to={`./genres/${genre.id}`}>
                 <h1>{genre.name}</h1>
             </Link>
             <span className='divisor'></span>

@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/index';
-import { users } from '../../data/users';
-
+import { useState } from 'react';
+import { getUser } from '../../selectors/getUser';
+import Swal from 'sweetalert2';
 import './loginScreen.css';
 
 export const LoginScreen = () => {
     const navigate = useNavigate();
+    const [user, useUser] = useState();
     const [formLoginValues, handleInputChange] = useForm({
         usermame: '',
         password: '',
@@ -13,16 +15,16 @@ export const LoginScreen = () => {
     const { username, password } = formLoginValues;
     const handleLogin = (e) => {
         e.preventDefault();
-        const user = users.find(user => user.name === username && user.password === password);
-        if(user)
-        {
-
-            navigate('/',{
-                replace: true,
-                state: {
-                    logged: true,
-                    user
-                }
+        const userLog = getUser(username, password);
+        if(userLog) {
+            localStorage.setItem('user',JSON.stringify(userLog));
+            navigate('/');
+        }
+        else{
+            Swal.fire({
+                title: 'Error',
+                text: 'Username or password incorrect',
+                icon: 'error'
             });
         }
     };

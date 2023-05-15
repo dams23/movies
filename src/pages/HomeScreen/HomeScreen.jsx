@@ -7,12 +7,13 @@ import { movies } from '../../data/movies';
 import './homeScreen.css';
 
 export const HomeScreen = () => {
+    const user = localStorage.getItem('user');
     return (
         <>
             <Link to={`./movie/${movies[0].id}`}>
                 <FeaturedMovie movie={movies[0]} />
             </Link>
-            {/* Mi lista si estoy logged */}
+            {user ? <>My lista</> : <></>}
             {genres.map((g) => (
                 <MovieGenre key={g.id} genre={g} />
             ))}

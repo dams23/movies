@@ -51,6 +51,24 @@
     border-left: 1px solid var(--main-primary-yellow);
     border-radius: 0 15px 15px 0;
 }
+.drop-downbtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--main-primary-white);
+}
+.navbar .drop-down {
+    display: none;
+    color: var(--main-primary-white);
+    position: absolute;
+    border-radius: 15px;
+    z-index: 1;
+}
+.drop-genres:hover .drop-down {
+    display: flex;
+    background-color: #000;
+    flex-direction: column;
+    gap: 5px;
+}
 @media screen and (max-width: 600px) {
     .navbar {
         width: 100vw;
@@ -66,9 +84,9 @@
         padding-block: 10px;
     }
     .navbar ul li:hover {
-      background-color: var(--main-primary-white);
+        background-color: var(--main-primary-white);
     }
     .search-container {
-      display: inline;
-  }
+        display: inline;
+    }
 }

@@ -7,7 +7,9 @@ import { MovieScreen } from '../pages/MovieScreen/MovieScreen';
 import { SearchScreen } from '../pages/SearchScreen/SearchScreen';
 import UserProvider from '../context/context';
 import { GenresScreen } from '../pages/GenresScreen/GenresScreen';
+import { LoginScreen } from '../pages/Login/LoginScreen';
 export const AppRouter = () => {
+    const user = localStorage.getItem('user');
     return (
         <>
         <UserProvider>
@@ -16,6 +18,7 @@ export const AppRouter = () => {
             <Navbar />
                 <Routes>
                     <Route path='/' element={<HomeScreen />} />
+                    <Route path='/login' element={<LoginScreen />} />
                     <Route path='/movie/:id' element={<MovieScreen />} />
                     <Route path='/search' element={<SearchScreen />} />
                     <Route path='/genres/:id' element={<GenresScreen />} />

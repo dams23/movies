@@ -31,7 +31,7 @@ export const movies = [
         'Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.',
         genres: [
             {
-                id: 4,
+                id: 5,
                 name: 'Drama',
             },
             {
@@ -39,11 +39,11 @@ export const movies = [
                 name: 'Action',
             },
             {
-                id: 5,
+                id: 6,
                 name: 'Crime',
             },
             {
-                id: 6,
+                id: 4,
                 name: 'Thriller',
             },
         ],

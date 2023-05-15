@@ -15,5 +15,12 @@ export const genres = [
         id: 4,
         name: 'Thriller',
     },
-
+    {
+        id: 5,
+        name: 'Drama',
+    },
+    {
+        id: 6,
+        name: 'Crime',
+    },
 ];
