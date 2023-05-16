@@ -8,7 +8,7 @@ export const users = [
         
       }
     ],
-    'my-list':[
+    'myList':[
       {}
     ]
   },
@@ -19,17 +19,17 @@ export const users = [
     'library': [
       {
         'id': 1,
-        'date-shoped': '2023/01/11'
+        'dateShoped': '2023/01/11'
       },
       {
         'id': 6,
-        'date-shoped': '2023/01/12'
+        'dateShoped': '2023/01/12'
       },
     ],
-    'my-list':[
+    'myList':[
       {
         'id': 5,
-        'date-added': '2022/12/12'
+        'dateAdded': '2022/12/12'
       },
     ]
   },

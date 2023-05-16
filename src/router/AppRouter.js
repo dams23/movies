@@ -21,6 +21,7 @@ export const AppRouter = () => {
                     <Route path='/login' element={<LoginScreen />} />
                     <Route path='/movie/:id' element={<MovieScreen />} />
                     <Route path='/search' element={<SearchScreen />} />
+                    <Route path='/myList' element={<SearchScreen />} />
                     <Route path='/genres/:id' element={<GenresScreen />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>

@@ -5,6 +5,7 @@ import { genres } from '../../data/genres';
 import { movies } from '../../data/movies';
 
 import './homeScreen.css';
+import { MyList } from '../../components/MyList/MyList';
 
 export const HomeScreen = () => {
     const user = localStorage.getItem('user');
@@ -13,7 +14,7 @@ export const HomeScreen = () => {
             <Link to={`./movie/${movies[0].id}`}>
                 <FeaturedMovie movie={movies[0]} />
             </Link>
-            {user ? <>My lista</> : <></>}
+            {user ? <MyList /> : <></>}
             {genres.map((g) => (
                 <MovieGenre key={g.id} genre={g} />
             ))}

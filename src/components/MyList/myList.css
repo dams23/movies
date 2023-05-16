@@ -1,0 +1,31 @@
+.movies__container {
+    margin: 5%;
+}
+
+.movies__container a {
+    color: var(--main-primary-white);
+}
+.movies__list {
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px;
+    max-width: 100vw;
+}
+.movies__list::-webkit-scrollbar {
+    height: 10px;
+    color: var(--main-primary-white);
+}
+.movies__list::-webkit-scrollbar-thumb {
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+}
+.movies__list > .card-movie {
+    min-width: 200px;
+    max-width: 200px;
+}
+.divisor {
+    margin-bottom: 5vh;
+    display: block;
+    border-bottom: solid 1px var(--main-primary-white);
+}
