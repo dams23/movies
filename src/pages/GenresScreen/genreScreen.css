@@ -1,14 +1,15 @@
-.genre-container{
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  color: var(--main-primary-white);
-  text-align: center;
-  margin-top: 1rem;
+.genre-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: var(--main-primary-white);
+    text-align: center;
+    margin-top: 1rem;
 }
 .genre-movies {
-  display: flex;
-  margin-inline: 20px;
-  gap: 15px;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: 20px;
+    gap: 15px;
 }

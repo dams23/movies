@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import './moviedetails.css';
 import { MoviePlayer } from '../moviePlayer/MoviePlayer';
 import { Loader } from '../loader/Loader';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 export const MovieDetails = ({
+    id,
     duration,
     director,
     description,
@@ -11,16 +12,45 @@ export const MovieDetails = ({
     title,
     trailer,
 }) => {
+    const [list, setList] = useState(false);
     const [view, setView] = useState(false);
     const [loading, setLoading] = useState(false);
-    const handleViewMovie = (e) =>{
+    const user = localStorage.getItem('user');
+    const handleViewMovie = (e) => {
         e.preventDefault();
         setLoading(true);
-        setTimeout(() =>{
+        setTimeout(() => {
             setView(true);
             setLoading(false);
         }, 2000);
-    }
+    };
+    const handleAddToList = (e) => {
+        e.preventDefault();
+        setList(true);
+        let userLocal = JSON.parse(user);
+        userLocal.myList.push({
+            id: id,
+            addedAt: new Date()
+                .toISOString()
+                .split('T')[0]
+                .toString()
+                .replaceAll('-', '/'),
+        });
+        localStorage.setItem('user', JSON.stringify(userLocal));
+    };
+    useEffect(() => {
+        if (user) {
+            const { myList } = JSON.parse(user);
+            if (myList.length > 0 && myList !== undefined) {
+                myList.map((m) => {
+                    if (m.id === id) {
+                        setList(true);
+                    }
+                });
+            }
+        }
+    });
+
     return (
         <>
             <article className='movie-container'>
@@ -36,12 +66,21 @@ export const MovieDetails = ({
                     <p>{description}</p>
                 </main>
                 <section className='buttons-container'>
-                    <button className='btn-addtolist'>
-                        <i class='bx bx-list-plus'></i>Add to my list
-                    </button>
-                    <button className='btn-addtolist' onClick={handleViewMovie}>
-                    <i class='bx bx-movie-play'></i>Play
-                    </button>
+                    {list ? (
+                        <button
+                            className='btn-addtolist'
+                            onClick={handleViewMovie}>
+                            <i className='bx bx-movie-play'></i>Play
+                        </button>
+                    ) : user ? (
+                        <button
+                            className='btn-addtolist'
+                            onClick={handleAddToList}>
+                            <i className='bx bx-list-plus'></i>Add to my list
+                        </button>
+                    ) : (
+                        <></>
+                    )}
                 </section>
                 <footer>
                     <p>

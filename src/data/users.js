@@ -3,13 +3,7 @@ export const users = [
     'username': 'admin',
     'password': 'admin',
     'role': 'admin',
-    'library': [
-      {
-        
-      }
-    ],
     'myList':[
-      {}
     ]
   },
   {
@@ -19,15 +13,15 @@ export const users = [
     'myList':[
       {
         'id': 5,
-        'dateAdded': '2022/12/12'
+        'addedAt': '2022/12/12'
       },
       {
         'id': 8,
-        'dateAdded': '2022/12/12'
+        'addedAt': '2022/12/12'
       },
       {
         'id': 10,
-        'dateAdded': '2022/12/12'
+        'addedAt': '2022/12/12'
       },
     ]
   },

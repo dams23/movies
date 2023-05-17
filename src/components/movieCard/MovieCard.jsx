@@ -3,7 +3,7 @@ import { moviesImages } from '../../helpers/moviesImages';
 
 import './moviecard.css';
 
-export const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie, addedAt = null }) => {
     const { id, title, releaseDate, poster } = movie;
     return (
         <>
@@ -23,6 +23,16 @@ export const MovieCard = ({ movie }) => {
                                 {releaseDate}
                             </span>
                         </p>
+                        {addedAt ? (
+                            <p className='card-text'>
+                                <span>
+                                    <b>Added At: </b>
+                                    {addedAt}
+                                </span>
+                            </p>
+                        ) : (
+                            <></>
+                        )}
                     </section>
                 </Link>
             </article>

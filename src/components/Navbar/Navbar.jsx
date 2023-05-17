@@ -45,7 +45,7 @@ export const Navbar = () => {
                     {user ? (
                         <>
                             <li>
-                                <Link to='/'>My list</Link>
+                                <Link to='/myList'>My list</Link>
                             </li>
                             <li>
                                 <Link onClick={handleLogOut} to='/'>Log Out</Link>
