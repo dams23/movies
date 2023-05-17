@@ -3,7 +3,6 @@ import { MovieDetails } from '../../components/movieDetails/MovieDetails';
 import { MovieCover } from '../../components/movieCover/MovieCover';
 import { useMovie } from '../../hooks/index';
 import { Loader } from '../../components/loader/Loader';
-import { MoviePlayer } from '../../components/moviePlayer/MoviePlayer';
 
 import './moviescreen.css';
 
