@@ -1,6 +1,4 @@
-body {
-    background-color: var(--main-primary-black);
-}
+
 .contenedor-login {
     display: flex;
     flex-direction: column;

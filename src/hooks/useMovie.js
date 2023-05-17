@@ -11,6 +11,10 @@ export const useMovie = (movieId) => {
                 setLoading(true);
                 setError(false);
                 const movie = getMovieById(movieId);
+                if (movie === undefined){
+                    setLoading(false);
+                    throw new Error('Movie not found');
+                }
                 setTimeout(() => {
                     setLoading(false);
                 }, 1000);

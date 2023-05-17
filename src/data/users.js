@@ -16,19 +16,17 @@ export const users = [
     'username': 'testuser',
     'password': 'testuser',
     'role': 'user',
-    'library': [
-      {
-        'id': 1,
-        'dateShoped': '2023/01/11'
-      },
-      {
-        'id': 6,
-        'dateShoped': '2023/01/12'
-      },
-    ],
     'myList':[
       {
         'id': 5,
+        'dateAdded': '2022/12/12'
+      },
+      {
+        'id': 8,
+        'dateAdded': '2022/12/12'
+      },
+      {
+        'id': 10,
         'dateAdded': '2022/12/12'
       },
     ]

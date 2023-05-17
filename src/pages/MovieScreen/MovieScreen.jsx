@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { MovieDetails } from '../../components/movieDetails/MovieDetails';
 import { MovieCover } from '../../components/movieCover/MovieCover';
 import { useMovie } from '../../hooks/useMovie';
@@ -9,21 +9,21 @@ import './moviescreen.css';
 
 export const MovieScreen = () => {
     const { id } = useParams();
-    const {state: movie, loading, error} = useMovie(id);
-    if(loading) {
+    const { state: movie, loading, error } = useMovie(id);
+    if (loading) {
         return <Loader />;
     }
-    if(error) {
-        return <h1>Upss..</h1>
+    if (error) {
+        return <Navigate to='/NotFound'></Navigate>;
     }
 
     return (
         <>
-        <MovieCover 
-            poster={movie.poster}
-            title={movie.title}
-            releaseDate={movie.releaseDate}
-        />
+            <MovieCover
+                poster={movie.poster}
+                title={movie.title}
+                releaseDate={movie.releaseDate}
+            />
             <MovieDetails
                 id={movie.id}
                 title={movie.title}
@@ -33,9 +33,6 @@ export const MovieScreen = () => {
                 genres={movie.genres}
                 poster={movie.poster}
                 releaseDate={movie.releaseDate}
-            />
-            <MoviePlayer 
-                title={movie.title}
                 trailer={movie.trailer}
             />
         </>

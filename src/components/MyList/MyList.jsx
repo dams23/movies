@@ -2,11 +2,18 @@ import { MovieCard } from '../movieCard/MovieCard';
 import { getMovieById } from '../../selectors/getMovieById';
 import './myList.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export const MyList = () => {
+    const [list, setList] = useState([]);
     const user = localStorage.getItem('user');
     const { myList } = JSON.parse(user);
-    console.log(myList.length);
+    useEffect(() => {
+        setList(myList);
+    },[]);
+    if (user === undefined) {
+        return <></>;
+    }
     return myList.length === 0 ? (
         <></>
     ) : (

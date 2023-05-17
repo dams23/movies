@@ -1,5 +1,6 @@
 .movies__container {
-    margin: 5%;
+    margin-inline: 5%;
+    margin-block: 2%;
 }
 
 .movies__container a {

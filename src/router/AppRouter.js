@@ -13,7 +13,6 @@ export const AppRouter = () => {
     return (
         <>
         <UserProvider>
-
             <BrowserRouter>
             <Navbar />
                 <Routes>

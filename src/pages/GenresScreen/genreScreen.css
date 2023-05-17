@@ -1,14 +1,14 @@
 .genre-container{
-  color: var(--main-primary-white);
   display: flex;
-  text-align: center;
   flex-direction: column;
+  max-width: 100%;
+  color: var(--main-primary-white);
+  text-align: center;
   margin-top: 1rem;
 }
 .genre-movies {
   display: flex;
-  flex-direction: row;
-  margin: 1rem;
+  margin-inline: 20px;
   gap: 15px;
   justify-content: center;
 }

@@ -17,7 +17,8 @@ export const Navbar = () => {
         navigate('/search/');
     };
     const handleLogOut= ()=>{
-        localStorage.removeItem('user');
+        localStorage.clear();
+        window.location.reload(true);
     }
     return (
         <header>

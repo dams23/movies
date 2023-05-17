@@ -1,7 +1,26 @@
 import { Link } from 'react-router-dom';
-
-export const MovieDetails = ({ duration, director, description, genres=[]}) => {
-    
+import './moviedetails.css';
+import { MoviePlayer } from '../moviePlayer/MoviePlayer';
+import { Loader } from '../loader/Loader';
+import { useState } from 'react';
+export const MovieDetails = ({
+    duration,
+    director,
+    description,
+    genres = [],
+    title,
+    trailer,
+}) => {
+    const [view, setView] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const handleViewMovie = (e) =>{
+        e.preventDefault();
+        setLoading(true);
+        setTimeout(() =>{
+            setView(true);
+            setLoading(false);
+        }, 2000);
+    }
     return (
         <>
             <article className='movie-container'>
@@ -16,6 +35,14 @@ export const MovieDetails = ({ duration, director, description, genres=[]}) => {
                 <main>
                     <p>{description}</p>
                 </main>
+                <section className='buttons-container'>
+                    <button className='btn-addtolist'>
+                        <i class='bx bx-list-plus'></i>Add to my list
+                    </button>
+                    <button className='btn-addtolist' onClick={handleViewMovie}>
+                    <i class='bx bx-movie-play'></i>Play
+                    </button>
+                </section>
                 <footer>
                     <p>
                         <b>Genres</b>
@@ -33,7 +60,13 @@ export const MovieDetails = ({ duration, director, description, genres=[]}) => {
                     </ul>
                 </footer>
             </article>
-            
+            {loading ? (
+                <Loader />
+            ) : view ? (
+                <MoviePlayer title={title} trailer={trailer} />
+            ) : (
+                <></>
+            )}
         </>
     );
 };

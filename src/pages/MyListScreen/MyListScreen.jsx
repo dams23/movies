@@ -3,9 +3,11 @@ import { MovieCard } from '../../components/movieCard/MovieCard';
 import { getMovieById } from '../../selectors/getMovieById';
 
 export const MyListScreen = () => {
-  const user = localStorage.getItem('user');
+    const user = localStorage.getItem('user');
+    if (user === undefined) {
+        return <></>;
+    }
     const { myList } = JSON.parse(user);
-    console.log(myList.length);
     return myList.length === 0 ? (
         <></>
     ) : (
@@ -21,4 +23,4 @@ export const MyListScreen = () => {
             </div>
         </section>
     );
-}
+};
