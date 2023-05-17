@@ -23,8 +23,8 @@ export const MyList = () => {
             </Link>
             <span className='divisor'></span>
             <div className='movies__list'>
-                {myList.map((m) => (
-                    <MovieCard key={m.id} movie={getMovieById(m.id)} addedAt={m.addedAt} />
+                {list.map((m) => (
+                    <MovieCard key={m.id} movie={getMovieById(m.id)}  />
                 ))}
             </div>
         </section>

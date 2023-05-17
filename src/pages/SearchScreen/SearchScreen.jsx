@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks';
 import { getMoviesByTitle } from '../../selectors/getMoviesByTitle';
 import { NotResult } from '../../components/NotResults/NotResult';

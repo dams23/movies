@@ -1,5 +1,4 @@
 import { useForm } from '../../hooks';
-import { movies } from '../../data/movies';
 import './notfound.css';
 
 export const NotFound = () => {
@@ -8,8 +7,7 @@ export const NotFound = () => {
     });
     const { search } = formValue;
     const handleSearch = (e) => {
-      e.preventDefault();
-      
+        e.preventDefault();
     };
     return (
         <>

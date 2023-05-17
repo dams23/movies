@@ -1,13 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/index';
-import { useState } from 'react';
 import { getUser } from '../../selectors/getUser';
 import Swal from 'sweetalert2';
 import './loginScreen.css';
 
 export const LoginScreen = () => {
     const navigate = useNavigate();
-    const [user, useUser] = useState();
     const [formLoginValues, handleInputChange] = useForm({
         usermame: '',
         password: '',

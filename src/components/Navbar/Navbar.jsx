@@ -1,7 +1,7 @@
-import { Link, Navigate, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { genres } from '../../data/genres';
-import './navbar.css';
 import { useForm } from '../../hooks';
+import './navbar.css';
 
 export const Navbar = () => {
     const [params, setParams] = useSearchParams();

@@ -10,7 +10,6 @@ import { GenresScreen } from '../pages/GenresScreen/GenresScreen';
 import { LoginScreen } from '../pages/Login/LoginScreen';
 import { MyListScreen } from '../pages/MyListScreen/MyListScreen';
 export const AppRouter = () => {
-    const user = localStorage.getItem('user');
     return (
         <>
         <UserProvider>

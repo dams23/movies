@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { MovieCard } from '../../components/movieCard/MovieCard';
 import { NotResult } from '../../components/NotResults/NotResult';
 import { getMovieById } from '../../selectors/getMovieById';
